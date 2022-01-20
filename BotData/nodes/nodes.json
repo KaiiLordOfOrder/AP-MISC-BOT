@@ -1,0 +1,740 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 148,
+      "y": 252
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "a!help",
+          "value": "Shows this embed.",
+          "inline": "false"
+        },
+        {
+          "name": "a!ping",
+          "value": "Pings the bot.",
+          "inline": "false"
+        },
+        {
+          "name": "a!stats",
+          "value": "Shows the bot's stats",
+          "inline": "false"
+        },
+        {
+          "name": "a!gamestats",
+          "value": "Shows the game's stats.",
+          "inline": "false"
+        },
+        {
+          "name": "a!gameinfo",
+          "value": "Shows the game's stats.",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 346,
+      "y": 204,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF4D00",
+        "Help",
+        "",
+        "AltherianProphecies",
+        "",
+        "",
+        "Here are all my commands:",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "ping",
+      "guid": "df0fc2c6-fd76-48eb-97df-851af24c59de",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "c3e89fd5-434e-4830-a88c-265b05665d1e"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 149,
+      "y": 327
+    },
+    {
+      "type": "response",
+      "name": "pong",
+      "guid": "c3e89fd5-434e-4830-a88c-265b05665d1e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "df0fc2c6-fd76-48eb-97df-851af24c59de"
+        }
+      ],
+      "x": 345,
+      "y": 312,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.name}",
+        "<@${dbsVars.CommandAuthor.id}> pong!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "stats",
+      "guid": "f984a300-fcc9-448b-b09c-04e0da0ac093",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "4c26bd3c-700c-49d8-8b55-0f500d721c6c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 152,
+      "y": 403
+    },
+    {
+      "type": "command",
+      "name": "gamestats",
+      "guid": "b2e441d7-af04-4668-8888-7930603c7393",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "541313f0-c91e-4873-8146-0ddcde2068ef"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 154,
+      "y": 477
+    },
+    {
+      "type": "command",
+      "name": "gameinfo",
+      "guid": "0fb9567d-9d4f-4d58-b58a-c587c42be248",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "440fa09b-3c39-447d-99c7-d40d0ef71dec"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 154,
+      "y": 553
+    },
+    {
+      "type": "response",
+      "name": "bot-stats",
+      "guid": "4c26bd3c-700c-49d8-8b55-0f500d721c6c",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "Version:",
+          "value": "0.1",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f984a300-fcc9-448b-b09c-04e0da0ac093"
+        }
+      ],
+      "x": 348,
+      "y": 419,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.name}",
+        "FF3C00",
+        "Bot Statistics",
+        "",
+        "",
+        "",
+        "",
+        "Here are my stats:",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "gameinfo-message",
+      "guid": "541313f0-c91e-4873-8146-0ddcde2068ef",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "",
+          "value": "Altherian Prophecies I - The Order",
+          "inline": "false"
+        },
+        {
+          "name": "Game Version",
+          "value": "0.0.0",
+          "inline": "false"
+        },
+        {
+          "name": "Is Released?",
+          "value": "No",
+          "inline": "false"
+        },
+        {
+          "name": "Alpha or Beta?",
+          "value": "None",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b2e441d7-af04-4668-8888-7930603c7393"
+        }
+      ],
+      "x": 350,
+      "y": 526,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.name}",
+        "FF3C00",
+        "Game Information:",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "gameinfo-message_1",
+      "guid": "440fa09b-3c39-447d-99c7-d40d0ef71dec",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "",
+          "value": "Altherian Prophecies I - The Order",
+          "inline": "false"
+        },
+        {
+          "name": "Game Version",
+          "value": "0.0.0",
+          "inline": "false"
+        },
+        {
+          "name": "Is Released?",
+          "value": "No",
+          "inline": "false"
+        },
+        {
+          "name": "Alpha or Beta?",
+          "value": "None",
+          "inline": "false"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0fb9567d-9d4f-4d58-b58a-c587c42be248"
+        }
+      ],
+      "x": 350,
+      "y": 661,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.name}",
+        "FF3C00",
+        "Game Information:",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "ban-user",
+      "guid": "74bf0afa-f2b0-4954-8f1e-43043824e45c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a5b71690-c570-4b49-8d64-040e03c24037"
+        }
+      ],
+      "x": 508,
+      "y": 800,
+      "rtype": "User Action",
+      "rsubtype": "Ban User",
+      "formdata": [
+        "${tempVars.ban.id}",
+        "",
+        ""
+      ],
+      "formnames": [
+        "user",
+        "reason",
+        "days"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "ban",
+      "guid": "4818a8c0-9106-4af3-9668-431dd206bd67",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "a5b71690-c570-4b49-8d64-040e03c24037"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 155,
+      "y": 628
+    },
+    {
+      "type": "command",
+      "name": "mute",
+      "guid": "1cb5b956-58df-49a9-9b9b-fca3e64e8d05",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "5ab1f6b1-6a0d-43ed-b82e-4e0e883e5c7c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 157,
+      "y": 708,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "mute-user",
+      "guid": "7ddbb12b-e85c-4d9d-980f-37738bf9f914",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5ab1f6b1-6a0d-43ed-b82e-4e0e883e5c7c"
+        }
+      ],
+      "x": 512,
+      "y": 926,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.mute.id}",
+        "Muted"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "mute-temp-var",
+      "guid": "5ab1f6b1-6a0d-43ed-b82e-4e0e883e5c7c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "7ddbb12b-e85c-4d9d-980f-37738bf9f914"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1cb5b956-58df-49a9-9b9b-fca3e64e8d05"
+        }
+      ],
+      "x": 352,
+      "y": 925,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "mute-temp-var",
+        "User",
+        "server"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "mute-temp-var_1",
+      "guid": "a5b71690-c570-4b49-8d64-040e03c24037",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "74bf0afa-f2b0-4954-8f1e-43043824e45c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4818a8c0-9106-4af3-9668-431dd206bd67"
+        }
+      ],
+      "x": 344,
+      "y": 794,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "ban-temp-var",
+        "User",
+        "server"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "set-prefix",
+      "guid": "d9515751-e08e-4d92-a439-68891f8db413",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "814197e5-5a47-4920-b208-8ab92c63af4d"
+        }
+      ],
+      "x": 519,
+      "y": 1044,
+      "rtype": "Bot Action",
+      "rsubtype": "SetPrefix",
+      "formdata": [
+        "getPrefix",
+        "server",
+        "server-prefix"
+      ],
+      "formnames": [
+        "main",
+        "vartype",
+        "varname"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "prefix",
+      "guid": "7f8d4400-ca53-49ac-b244-f8c3618ec695",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "814197e5-5a47-4920-b208-8ab92c63af4d"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 160,
+      "y": 788
+    },
+    {
+      "type": "response",
+      "name": "prefix-var",
+      "guid": "814197e5-5a47-4920-b208-8ab92c63af4d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "server-prefix",
+      "saveToVariableType": "server",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d9515751-e08e-4d92-a439-68891f8db413"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7f8d4400-ca53-49ac-b244-f8c3618ec695"
+        }
+      ],
+      "x": 348,
+      "y": 1038,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "server-prefix",
+        "Text",
+        "server",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "status",
+      "guid": "1292d31a-e369-43c7-a621-4e2dff5b63fb",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d3480480-1ae2-471c-aa55-86db1d3c78f7"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 162,
+      "y": 869,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "bot-status",
+      "guid": "d3480480-1ae2-471c-aa55-86db1d3c78f7",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1292d31a-e369-43c7-a621-4e2dff5b63fb"
+        }
+      ],
+      "x": 348,
+      "y": 1149,
+      "rtype": "Bot Action",
+      "rsubtype": "More Status",
+      "formdata": [
+        "WATCHING",
+        "The Guild with $$Members$$ of Members"
+      ],
+      "formnames": [
+        "statusOption",
+        "statusText"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}

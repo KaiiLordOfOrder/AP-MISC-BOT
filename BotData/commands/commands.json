@@ -1,0 +1,281 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "a!help",
+              "value": "Shows this embed.",
+              "inline": "false"
+            },
+            {
+              "name": "a!ping",
+              "value": "Pings the bot.",
+              "inline": "false"
+            },
+            {
+              "name": "a!stats",
+              "value": "Shows the bot's stats",
+              "inline": "false"
+            },
+            {
+              "name": "a!gamestats",
+              "value": "Shows the game's stats.",
+              "inline": "false"
+            },
+            {
+              "name": "a!gameinfo",
+              "value": "Shows the game's stats.",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF4D00",
+          "title": "Help",
+          "url": "",
+          "authorname": "AltherianProphecies",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Here are all my commands:",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ping",
+      "actions": [
+        {
+          "name": "pong",
+          "category": "Message",
+          "type": "Send Message",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.name}",
+          "messagetext": "<@${dbsVars.CommandAuthor.id}> pong!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "stats",
+      "actions": [
+        {
+          "name": "bot-stats",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "Version:",
+              "value": "0.1",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.name}",
+          "color": "FF3C00",
+          "title": "Bot Statistics",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Here are my stats:",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "gamestats",
+      "actions": [
+        {
+          "name": "gameinfo-message",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "",
+              "value": "Altherian Prophecies I - The Order",
+              "inline": "false"
+            },
+            {
+              "name": "Game Version",
+              "value": "0.0.0",
+              "inline": "false"
+            },
+            {
+              "name": "Is Released?",
+              "value": "No",
+              "inline": "false"
+            },
+            {
+              "name": "Alpha or Beta?",
+              "value": "None",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.name}",
+          "color": "FF3C00",
+          "title": "Game Information:",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "gameinfo",
+      "actions": [
+        {
+          "name": "gameinfo-message_1",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "",
+              "value": "Altherian Prophecies I - The Order",
+              "inline": "false"
+            },
+            {
+              "name": "Game Version",
+              "value": "0.0.0",
+              "inline": "false"
+            },
+            {
+              "name": "Is Released?",
+              "value": "No",
+              "inline": "false"
+            },
+            {
+              "name": "Alpha or Beta?",
+              "value": "None",
+              "inline": "false"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.name}",
+          "color": "FF3C00",
+          "title": "Game Information:",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "actions": [
+        {
+          "name": "mute-temp-var_1",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "messageActionRows": [],
+          "varname": "ban-temp-var",
+          "vartype": "User",
+          "savevartype": "server"
+        },
+        {
+          "name": "ban-user",
+          "category": "User Action",
+          "type": "Ban User",
+          "messageActionRows": [],
+          "user": "${tempVars.ban.id}",
+          "reason": "",
+          "days": ""
+        }
+      ]
+    },
+    {
+      "name": "mute",
+      "perms": [],
+      "actions": [
+        {
+          "name": "mute-temp-var",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "messageActionRows": [],
+          "varname": "mute-temp-var",
+          "vartype": "User",
+          "savevartype": "server"
+        },
+        {
+          "name": "mute-user",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "messageActionRows": [],
+          "user": "${tempVars.mute.id}",
+          "rolename": "Muted"
+        }
+      ]
+    },
+    {
+      "name": "prefix",
+      "actions": [
+        {
+          "name": "prefix-var",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "server-prefix",
+          "vartype": "Text",
+          "savevartype": "server",
+          "param": "1"
+        },
+        {
+          "name": "set-prefix",
+          "category": "Bot Action",
+          "type": "SetPrefix",
+          "messageActionRows": [],
+          "main": "getPrefix",
+          "vartype": "server",
+          "varname": "server-prefix"
+        }
+      ]
+    },
+    {
+      "name": "status",
+      "perms": [],
+      "actions": [
+        {
+          "name": "bot-status",
+          "category": "Bot Action",
+          "type": "More Status",
+          "messageActionRows": [],
+          "statusoption": "WATCHING",
+          "statustext": "The Guild with $$Members$$ of Members"
+        }
+      ]
+    }
+  ]
+}
